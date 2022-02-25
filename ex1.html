@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>exercice 1</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+	<title>react bootcamp</title>
+	<script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+	<script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+<div id="app"></div>
+<script type="text/babel">
+class App extends React.Component{
+	render(){
+		return(
+			<div className="fluide">
+				<Header />
+				<Content />
+				<Footer />
+			</div>
+		);
+	}
+}
+class Header extends React.Component{
+	render(){
+		return (
+			<nav className="navbar navbar-expand-lg navbar-light bg-light">
+  <div className="container-fluid">
+    <a className="navbar-brand" href="#">Navbar</a>
+    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon"></span>
+    </button>
+    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+        <li className="nav-item">
+          <a className="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link" href="#">Link</a>
+        </li>
+        <li className="nav-item dropdown">
+          <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a className="dropdown-item" href="#">Action</a></li>
+            <li><a className="dropdown-item" href="#">Another action</a></li>
+            <li><hr className="dropdown-divider"/></li>
+            <li><a className="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link disabled" href="#" tabIndex="-1" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+      <form className="d-flex">
+        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button className="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+		);
+	}
+
+			
+	
+}
+class Content extends React.Component{
+	render(){
+		return (
+			<div className="alert alert-success">
+				<h1>le contenu de la page web</h1>
+				<br/><br/><br/><br/><br/><br/>
+			</div>
+		);
+	}
+}
+class Footer extends React.Component{
+	render(){
+		const design={backgroundColor: "#45526e"};
+		return (
+		
+
+  <footer
+          className="text-center text-lg-start text-white"
+          style={design}
+          >
+    
+    <div className="container p-4 pb-0">
+     
+      <section className="">
+       
+        <div className="row">
+          
+          <div className="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h6 className="text-uppercase mb-4 font-weight-bold">
+              Company name
+            </h6>
+            <p>
+              Here you can use rows and columns to organize your footer
+              content. Lorem ipsum dolor sit amet, consectetur adipisicing
+              elit.
+            </p>
+          </div>
+          
+
+          <hr className="w-100 clearfix d-md-none" />
+
+         
+          <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h6 className="text-uppercase mb-4 font-weight-bold">Products</h6>
+            <p>
+              <a className="text-white">MDBootstrap</a>
+            </p>
+            <p>
+              <a className="text-white">MDWordPress</a>
+            </p>
+            <p>
+              <a className="text-white">BrandFlow</a>
+            </p>
+            <p>
+              <a className="text-white">Bootstrap Angular</a>
+            </p>
+          </div>
+          
+
+          <hr className="w-100 clearfix d-md-none" />
+
+          
+          <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h6 className="text-uppercase mb-4 font-weight-bold">
+              Useful links
+            </h6>
+            <p>
+              <a className="text-white">Your Account</a>
+            </p>
+            <p>
+              <a className="text-white">Become an Affiliate</a>
+            </p>
+            <p>
+              <a className="text-white">Shipping Rates</a>
+            </p>
+            <p>
+              <a className="text-white">Help</a>
+            </p>
+          </div>
+
+          
+          <hr className="w-100 clearfix d-md-none" />
+
+          
+          <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h6 className="text-uppercase mb-4 font-weight-bold">Contact</h6>
+            <p><i className="fas fa-home mr-3"></i> New York, NY 10012, US</p>
+            <p><i className="fas fa-envelope mr-3"></i> info@gmail.com</p>
+            <p><i className="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+            <p><i className="fas fa-print mr-3"></i> + 01 234 567 89</p>
+          </div>
+         
+        </div>
+        
+      </section>
+      
+
+      <hr className="my-3"/>
+
+      <section className="p-3 pt-0">
+        <div className="row d-flex align-items-center">
+        
+          <div className="col-md-7 col-lg-8 text-center text-md-start">
+          
+            <div className="p-3">
+              © 2020 Copyright:
+              <a className="text-white" href="https://mdbootstrap.com/"
+                 >MDBootstrap.com</a
+                >
+            </div>
+            
+          </div>
+          
+          <div className="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+           
+            <a
+               className="btn btn-outline-light btn-floating m-1"
+               className="text-white"
+               role="button"
+               ><i className="fab fa-facebook-f"></i
+              ></a>
+
+            
+            <a
+               className="btn btn-outline-light btn-floating m-1"
+               className="text-white"
+               role="button"
+               ><i className="fab fa-twitter"></i
+              ></a>
+
+           
+            <a
+               className="btn btn-outline-light btn-floating m-1"
+               className="text-white"
+               role="button"
+               ><i className="fab fa-google"></i
+              ></a>
+
+            
+            <a
+               className="btn btn-outline-light btn-floating m-1"
+               className="text-white"
+               role="button"
+               ><i className="fab fa-instagram"></i
+              ></a>
+          </div>
+          
+        </div>
+      </section>
+      
+    </div>
+    
+  </footer>
+ 
+
+
+		)
+	}
+}
+ReactDOM.render(< App/>, document.getElementById("app"));
+</script>
+</body>
+</html>
