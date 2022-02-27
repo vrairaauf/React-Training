@@ -16,12 +16,16 @@
 <body>
 <div id="app"></div>
 <script type="text/babel">
+  //element parent on peut definies les props dans l'élément parent et lenvoyer au element enfant
+  //props => propriete en html
+  //syntaxe name=valeur
+
 class App extends React.Component{
 	render(){
 		return(
 			<div className="fluide">
 				<Header />
-				<Content />
+				<Content titre="WELCOME ON OUR WEBSITE"/>
 				<Footer />
 			</div>
 		);
@@ -30,7 +34,9 @@ class App extends React.Component{
 class Header extends React.Component{
 	render(){
 		return (
+
 			<nav className="navbar navbar-expand-lg navbar-light bg-light">
+
   <div className="container-fluid">
     <a className="navbar-brand" href="#">Navbar</a>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,6 +53,7 @@ class Header extends React.Component{
         <li className="nav-item dropdown">
           <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Dropdown
+
           </a>
           <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a className="dropdown-item" href="#">Action</a></li>
@@ -74,10 +81,16 @@ class Header extends React.Component{
 	
 }
 class Content extends React.Component{
+  state={
+    couleur:"RGB",
+    screen:"FULL"
+
+  }
 	render(){
 		return (
-			<div className="alert alert-success">
-				<h1>le contenu de la page web</h1>
+			<div className="container alert alert-success">
+				<h1>{this.props.titre}</h1>
+        <p>COLOR FOR WEBSITE :{this.state.couleur}</p>
 				<br/><br/><br/><br/><br/><br/>
 			</div>
 		);
